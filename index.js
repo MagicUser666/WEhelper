@@ -2,8 +2,7 @@ var Helper = new Vue({
     el: "#Helper",
     data() {
         return {
-            serial: '',
-            ip: ''
+            name: ''
         }
     },
     methods: {
@@ -11,7 +10,6 @@ var Helper = new Vue({
     }
 });
 
-function initData(serial, ip) {
-    Helper.serial = serial;
-    Helper.ip = ip;
-}
+mp.events.add('initData', (name) => {
+    Helper.name = name;
+})
