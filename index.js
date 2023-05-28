@@ -11,5 +11,5 @@ var Helper = new Vue({
 });
 
 mp.events.add('initData', (name) => {
-    Helper.name = name;
+    this.Helper.name = name;
 })
